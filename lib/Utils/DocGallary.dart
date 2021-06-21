@@ -96,12 +96,7 @@ class DocGallary extends StatelessWidget {
                               Card(
                                   elevation: 8,
                                   child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
+                             
                             ],
                           ),
                         ),
