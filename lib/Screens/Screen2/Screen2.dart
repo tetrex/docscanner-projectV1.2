@@ -1,3 +1,4 @@
+import 'package:doc_scanner/Components/DocGallary.dart';
 import 'package:flutter/material.dart';
 
 class Screen2 extends StatefulWidget {
@@ -11,6 +12,10 @@ class Screen2 extends StatefulWidget {
 class _Screen2State extends State<Screen2> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Size size = MediaQuery.of(context).size;
+
+    return Container(
+      child: DocGallary(size: size),
+    );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:doc_scanner/Models/State.dart';
+import 'package:doc_scanner/State/State.dart';
 import 'package:doc_scanner/Widgets/NavBar/NavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +22,7 @@ class _main_appState extends State<main_app> {
           // height: MediaQuery.of(context).size.height,
           children: [
             Container(
-                color: Colors.yellow,
+                color: Color(0xff08182A),
                 height: size.height,
                 width: size.width,
                 child: Consumer<ScreenState>(

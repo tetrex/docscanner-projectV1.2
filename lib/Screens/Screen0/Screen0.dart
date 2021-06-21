@@ -1,6 +1,6 @@
-import 'package:doc_scanner/Utils/DocCard.dart';
-import 'package:doc_scanner/Utils/PreviewCard.dart';
-import 'package:doc_scanner/Utils/SerchBar.dart';
+import 'package:doc_scanner/Components/DocCard.dart';
+import 'package:doc_scanner/Components/PreviewCard.dart';
+import 'package:doc_scanner/Components/SerchBar.dart';
 import 'package:flutter/material.dart';
 
 class Screen0 extends StatefulWidget {

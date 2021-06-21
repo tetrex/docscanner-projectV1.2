@@ -11,6 +11,7 @@ class DocGallary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Color(0xff08182A),
       margin: EdgeInsets.only(top: size.height * (2 / 17)),
       height: size.height * (5 / 12),
       width: size.width,
@@ -34,12 +35,13 @@ class DocGallary extends StatelessWidget {
                       height: size.height,
                       // color: Colors.limeAccent,
                       child: Padding(
-                        padding: const EdgeInsets.only(top:8.0,left: 8.0,right:8.0,bottom:60),
+                        padding: const EdgeInsets.only(
+                            top: 8.0, left: 8.0, right: 8.0, bottom: 60),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: GridView.count(
                             childAspectRatio: 0.8,
-                            crossAxisCount: 3,
+                            crossAxisCount: 2,
                             crossAxisSpacing: 12.0,
                             mainAxisSpacing: 12.0,
                             children: [
@@ -96,7 +98,6 @@ class DocGallary extends StatelessWidget {
                               Card(
                                   elevation: 8,
                                   child: Center(child: Text("Element"))),
-                             
                             ],
                           ),
                         ),

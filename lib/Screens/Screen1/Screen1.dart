@@ -1,4 +1,4 @@
-import 'package:doc_scanner/Utils/NewDocPopUpCard.dart';
+import 'package:doc_scanner/Components/NewDocPopUpCard.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
@@ -12,7 +12,7 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Color(0xff08182A),
       child: Center(
         child: NewDOcPopUpCard(),
       ),

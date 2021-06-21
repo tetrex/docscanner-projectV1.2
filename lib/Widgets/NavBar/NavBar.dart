@@ -1,4 +1,4 @@
-import 'package:doc_scanner/Models/State.dart';
+import 'package:doc_scanner/State/State.dart';
 import 'package:doc_scanner/Widgets/NavBar/Button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';

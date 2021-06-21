@@ -37,7 +37,7 @@ class NewDOcPopUpCard extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                       hintStyle: TextStyle(fontSize: 20),
-                      hintText: "United.doc",
+                      hintText: "Untitled.doc",
                     ),
                   ),
                 )

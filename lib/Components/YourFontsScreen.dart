@@ -1,4 +1,4 @@
-import 'package:doc_scanner/Utils/FontSelectionCard.dart';
+import 'package:doc_scanner/Components/FontSelectionCard.dart';
 import 'package:flutter/material.dart';
 
 //YourFontsWidget(size: size);
