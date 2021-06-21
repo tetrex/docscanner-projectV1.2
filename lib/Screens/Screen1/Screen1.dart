@@ -1,3 +1,4 @@
+import 'package:doc_scanner/Utils/NewDocPopUpCard.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
@@ -10,6 +11,11 @@ class Screen1 extends StatefulWidget {
 class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.red, child: Text("sds"));
+    return Container(
+      color: Colors.white,
+      child: Center(
+        child: NewDOcPopUpCard(),
+      ),
+    );
   }
 }

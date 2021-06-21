@@ -29,6 +29,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^5.0.0
+  circular_reveal_animation:
+  proste_bezier_curve:
   # jumping_bottom_nav_bar : 0.0.5
 
 dev_dependencies:
