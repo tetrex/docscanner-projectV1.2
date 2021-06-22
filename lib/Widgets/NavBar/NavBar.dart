@@ -19,6 +19,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    var iconSize = size.height * 0.032;
     return Stack(
       children: [
         Align(
@@ -26,9 +27,9 @@ class _NavBarState extends State<NavBar> {
           child: Container(
             // decoration: BoxDecoration(
             //     borderRadius: BorderRadius.all(Radius.circular(4))),
-            margin: EdgeInsets.only(right: size.width * 0.07),
-            height: 70,
-            width: 70,
+            margin: EdgeInsets.only(right: size.width * 0.068, bottom: 0.5),
+            height: size.width * 0.178,
+            width: size.width * 0.178,
             // color: Colors.amber[400],
             child: Button(),
           ),
@@ -43,7 +44,7 @@ class _NavBarState extends State<NavBar> {
             child: CustomPaint(
               size: Size(
                   size.width,
-                  (size.width * 0.12)
+                  (size.width * 0.13)
                       .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
               painter: RPSCustomPainter(),
             ),
@@ -55,13 +56,14 @@ class _NavBarState extends State<NavBar> {
             padding: const EdgeInsets.only(left: 12, right: 12.0),
             child: Container(
               width: size.width * 0.60,
+              height: size.width * 0.12,
               // color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    height: 50,
-                    width: 50,
+                    height: size.width * 0.14,
+                    width: size.width * 0.14,
                     decoration: BoxDecoration(
                         // color: Colors.amber,
                         ),
@@ -76,12 +78,13 @@ class _NavBarState extends State<NavBar> {
                               child: (Icon(
                                 Icons.home,
                                 color: Colors.white,
+                                size: iconSize,
                               )),
                             )),
                   ),
                   Container(
-                    height: 50,
-                    width: 50,
+                    height: size.width * 0.14,
+                    width: size.width * 0.14,
                     decoration: BoxDecoration(
                         // color: Colors.amber,
                         ),
@@ -96,12 +99,13 @@ class _NavBarState extends State<NavBar> {
                               child: (Icon(
                                 Icons.star_rate,
                                 color: Colors.white,
+                                size: iconSize,
                               )),
                             )),
                   ),
                   Container(
-                    height: 50,
-                    width: 50,
+                    height: size.width * 0.14,
+                    width: size.width * 0.14,
                     decoration: BoxDecoration(
                         // color: Colors.amber,
                         ),
@@ -116,6 +120,7 @@ class _NavBarState extends State<NavBar> {
                               child: (Icon(
                                 Icons.folder,
                                 color: Colors.white,
+                                size: iconSize,
                               )),
                             )),
                   ),

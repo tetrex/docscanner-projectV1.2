@@ -19,7 +19,6 @@ class _main_appState extends State<main_app> {
       child: Scaffold(
         // backgroundColor: Color.fromRGBO(8, 24, 42, 1),
         body: Stack(
-          // height: MediaQuery.of(context).size.height,
           children: [
             Container(
                 color: Color(0xff08182A),
@@ -29,11 +28,11 @@ class _main_appState extends State<main_app> {
                   builder: (context, screen, child) => (screen.element),
                 )),
             Positioned(
-              bottom: 0,
+              bottom: 0.0,
               child: Container(
                   // color: Colors.lightBlue[400],
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.width * 0.23,
+                  width: size.width,
+                  height: size.width * 0.245,
                   child: NavBar()),
             ),
           ],
