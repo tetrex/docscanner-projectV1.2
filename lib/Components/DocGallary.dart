@@ -1,4 +1,8 @@
+import 'package:doc_scanner/State/State.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'SerchBar.dart';
+import 'package:provider/provider.dart';
 
 class DocGallary extends StatelessWidget {
   const DocGallary({
@@ -10,100 +14,140 @@ class DocGallary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchController = TextEditingController();
     return Container(
       color: Color(0xff08182A),
-      margin: EdgeInsets.only(top: size.height * (2 / 17)),
+      // margin: EdgeInsets.only(top: size.height * (1.8 / 17)),
       height: size.height * (5 / 12),
       width: size.width,
-      child: Center(
-          child: ClipRRect(
-              borderRadius: BorderRadius.circular(28),
-              child: Container(
-                  decoration: BoxDecoration(
-                    // boxShadow: [BoxShadow(color: Colors.black,spreadRadius: 8)],
-                    // color: Colors.amber,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(28),
-                        topRight: Radius.circular(28)),
-                  ),
-                  height: size.height,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 40.0),
-                    child: Center(
-                        child: Container(
-                      width: size.width,
-                      height: size.height,
-                      // color: Colors.limeAccent,
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 8.0, left: 8.0, right: 8.0, bottom: 60),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: GridView.count(
-                            childAspectRatio: 0.8,
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 12.0,
-                            mainAxisSpacing: 12.0,
-                            children: [
-                              Card(
-                                  elevation: 8,
-                                  child: Center(
-                                      child: Icon(
-                                    Icons.add_circle_outline,
-                                    size: 40,
-                                    color: Colors.grey.shade700,
-                                  ))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                              Card(
-                                  elevation: 8,
-                                  child: Center(child: Text("Element"))),
-                            ],
-                          ),
-                        ),
+      child: Column(
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Consumer<ScreenState>(
+                  builder: (context, screen, child) => GestureDetector(
+                    onTap: () {
+                      screen.index = 0;
+                      screen.stateSelector();
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(left: 10),
+                      child: Icon(
+                        Icons.keyboard_backspace_outlined,
+                        color: Colors.white,
                       ),
-                    )),
-                  )))),
+                    ),
+                  ),
+                ),
+                Spacer(),
+                Align(
+                    alignment: Alignment.centerRight,
+                    child: Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: size.width * 0.095,
+                        width: size.width * 0.6,
+                        // color: Colors.yellow,
+                        child: SearchBar(searchController: searchController))),
+              ],
+            ),
+            height: size.width * 0.15,
+            // color: Colors.greenAccent,
+            width: size.width,
+          ),
+          Expanded(
+            child: Center(
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(28),
+                    child: Container(
+                        decoration: BoxDecoration(
+                          // boxShadow: [BoxShadow(color: Colors.black,spreadRadius: 8)],
+                          color: Color.fromRGBO(15, 50, 84, 0.5),
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(28),
+                              topRight: Radius.circular(28)),
+                        ),
+                        height: size.height,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
+                          child: Center(
+                              child: Container(
+                            width: size.width,
+                            height: size.height,
+                            // color: Colors.limeAccent,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 8.0, left: 8.0, right: 8.0, bottom: 60),
+                              child: Align(
+                                alignment: Alignment.topLeft,
+                                child: GridView.count(
+                                  childAspectRatio: 0.8,
+                                  crossAxisCount: 3,
+                                  crossAxisSpacing: 12.0,
+                                  mainAxisSpacing: 12.0,
+                                  children: [
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(
+                                            child: Icon(
+                                          Icons.add_circle_outline,
+                                          size: 40,
+                                          color: Colors.grey.shade700,
+                                        ))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )),
+                        )))),
+          ),
+        ],
+      ),
     );
   }
 }
