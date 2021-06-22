@@ -1,9 +1,8 @@
-import 'package:doc_scanner/Components/NewDocPopUpCard.dart';
-import 'package:doc_scanner/Components/PreviewCard.dart';
 import 'package:doc_scanner/State/State.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'SerchBar.dart';
+import 'package:provider/provider.dart';
 
 class DocGallary extends StatelessWidget {
   const DocGallary({
@@ -42,7 +41,14 @@ class DocGallary extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                SearchBar(searchController: searchController)
+                Align(
+                    alignment: Alignment.centerRight,
+                    child: Container(
+                        margin: EdgeInsets.only(right: 10),
+                        height: size.width * 0.095,
+                        width: size.width * 0.6,
+                        // color: Colors.yellow,
+                        child: SearchBar(searchController: searchController))),
               ],
             ),
             height: size.width * 0.15,
@@ -80,33 +86,59 @@ class DocGallary extends StatelessWidget {
                                   crossAxisSpacing: 12.0,
                                   mainAxisSpacing: 12.0,
                                   children: [
-                                    GestureDetector(
-                                      onTap: () {
-                                        showDialog(
-                                            context: context,
-                                            builder: (BuildContext context) {
-                                              return NewDOcPopUpCard();
-                                            });
-                                      },
-                                      child: Card(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                        ),
+                                    Card(
                                         elevation: 8,
                                         child: Center(
-                                          child: Icon(
-                                            Icons.add_circle_outline,
-                                            size: 40,
-                                            color: Colors.grey.shade700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    PreviewCard(
-                                      imagePath:
-                                          Image.asset("assets/docImage.png"),
-                                    ),
+                                            child: Icon(
+                                          Icons.add_circle_outline,
+                                          size: 40,
+                                          color: Colors.grey.shade700,
+                                        ))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
+                                    Card(
+                                        elevation: 8,
+                                        child: Center(child: Text("Element"))),
                                   ],
                                 ),
                               ),

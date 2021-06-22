@@ -13,10 +13,9 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       height: 42,
-      width: size.width * 0.7,
+      width: 310,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(21),
         color: Color(0xff3D4A5C),
@@ -36,7 +35,7 @@ class SearchBar extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(left: 6, right: 4),
             height: 120,
-            width: size.width * 0.5,
+            width: 200,
             child: TextField(
               controller: searchController,
               decoration: InputDecoration(

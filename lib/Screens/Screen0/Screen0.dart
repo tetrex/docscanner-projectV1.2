@@ -71,9 +71,9 @@ class _Screen0State extends State<Screen0> {
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.only(left: 12, right: 12),
                   children: [
-                    DocCard(screenStateIndex: 2),
+                    DocCard(),
                     SizedBox(width: 12),
-                    DocCard(screenStateIndex: 1),
+                    DocCard(),
                   ],
                 ),
               ),
@@ -106,34 +106,14 @@ class _Screen0State extends State<Screen0> {
                       mainAxisSpacing: 8.0,
                       padding: EdgeInsets.only(right: 20, left: 20, top: 8),
                       children: [
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/folder.png"),
-                        )),
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/scanner.png"),
-                        )),
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/docImage.png"),
-                        )),
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/docImage.png"),
-                        )),
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/docImage.png"),
-                        )),
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/docImage.png"),
-                        )),
-                        Center(
-                            child: PreviewCard(
-                          imagePath: Image.asset("assets/docImage.png"),
-                        )),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
+                        Center(child: PreviewCard()),
                       ]),
                 ),
               )
