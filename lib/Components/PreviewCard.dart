@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class PreviewCard extends StatelessWidget {
   const PreviewCard({
     Key? key,
+    required this.imagePath,
   }) : super(key: key);
+  final Widget imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,8 @@ class PreviewCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(30),
       ),
-      child: Image.asset("assets/docImage.png"),
+      child: imagePath,
     );
   }
 }
+//Image.asset("assets/docImage.png")

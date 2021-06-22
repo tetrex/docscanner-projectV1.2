@@ -5,15 +5,17 @@ import 'package:provider/provider.dart';
 class DocCard extends StatelessWidget {
   const DocCard({
     Key? key,
+    required this.screenStateIndex,
   }) : super(key: key);
-
+  final int screenStateIndex;
   @override
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
     return Consumer<ScreenState>(
       builder: (context, screen, child) => GestureDetector(
         onTap: () {
-          screen.index = 2;
+          screen.index = screenStateIndex;
+
           screen.stateSelector();
         },
         child: Container(

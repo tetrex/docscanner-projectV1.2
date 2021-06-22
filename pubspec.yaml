@@ -32,6 +32,7 @@ dependencies:
   circular_reveal_animation:
   proste_bezier_curve:
   device_preview: 
+  # o_popup:
   # jumping_bottom_nav_bar : 0.0.5
 
 dev_dependencies:
