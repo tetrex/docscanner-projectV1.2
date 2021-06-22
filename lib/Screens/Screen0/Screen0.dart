@@ -14,6 +14,7 @@ class _Screen0State extends State<Screen0> {
   final searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    var size=MediaQuery.of(context).size;
     return Container(
       child: Container(
         decoration: BoxDecoration(
@@ -24,11 +25,12 @@ class _Screen0State extends State<Screen0> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 55),
+              SizedBox(height: size.width*0.07),
               Container(
+                color: Colors.green,
                 child: SearchBar(searchController: searchController),
               ),
-              SizedBox(height: 28),
+              SizedBox(height: size.width*0.1),
               Container(
                 child: Row(
                   children: [
@@ -46,7 +48,7 @@ class _Screen0State extends State<Screen0> {
                   ],
                 ),
               ),
-              SizedBox(height: 52),
+              SizedBox(height: size.width*0.15),
               Container(
                 child: Row(
                   children: [
@@ -66,7 +68,7 @@ class _Screen0State extends State<Screen0> {
               ),
               SizedBox(height: 20),
               Container(
-                height: 159,
+                height: size.width*0.4,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.only(left: 12, right: 12),
@@ -77,7 +79,7 @@ class _Screen0State extends State<Screen0> {
                   ],
                 ),
               ),
-              SizedBox(height: 36),
+              SizedBox(height: size.width*0.1),
               Container(
                 child: Row(
                   children: [
@@ -100,20 +102,102 @@ class _Screen0State extends State<Screen0> {
                 child: Container(
                   height: 285,
                   child: GridView.count(
-                      childAspectRatio: 0.9,
-                      crossAxisCount: 2,
+                      scrollDirection: Axis.horizontal,
+                      childAspectRatio: 1.4,
+                      crossAxisCount: 1,
                       crossAxisSpacing: 10,
-                      mainAxisSpacing: 8.0,
+                      mainAxisSpacing: 10,
                       padding: EdgeInsets.only(right: 20, left: 20, top: 8),
                       children: [
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
-                        Center(child: PreviewCard()),
+                        Center(
+                            child: Stack(children: [
+                          PreviewCard(),
+                          Positioned(
+                            top: 10,
+                            right: 10,
+                            child: ClipOval(
+                              child: Container(
+                                  color: Colors.blue.shade300,
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("assets/scanner.png")),
+                            ),
+                          )
+                        ])),
+                        Center(
+                            child: Stack(children: [
+                          PreviewCard(),
+                          Positioned(
+                            top: 10,
+                            right: 10,
+                            child: ClipOval(
+                              child: Container(
+                                  color: Colors.blue.shade300,
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("assets/folder.png")),
+                            ),
+                          )
+                        ])),
+                        Center(
+                            child: Stack(children: [
+                          PreviewCard(),
+                          Positioned(
+                            top: 10,
+                            right: 10,
+                            child: ClipOval(
+                              child: Container(
+                                  color: Colors.blue.shade300,
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("assets/scanner.png")),
+                            ),
+                          )
+                        ])),
+                        Center(
+                            child: Stack(children: [
+                          PreviewCard(),
+                          Positioned(
+                            top: 10,
+                            right: 10,
+                            child: ClipOval(
+                              child: Container(
+                                  color: Colors.blue.shade300,
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("assets/folder.png")),
+                            ),
+                          )
+                        ])),
+                        Center(
+                            child: Stack(children: [
+                          PreviewCard(),
+                          Positioned(
+                            top: 10,
+                            right: 10,
+                            child: ClipOval(
+                              child: Container(
+                                  color: Colors.blue.shade300,
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("assets/scanner.png")),
+                            ),
+                          )
+                        ])),
+                        Center(
+                            child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                                child: Text(
+                              "View All",
+                              style: TextStyle(fontSize: 38),
+                            )),
+                          ),
+                        )),
                       ]),
                 ),
               )
