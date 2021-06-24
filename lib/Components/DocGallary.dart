@@ -91,7 +91,7 @@ class DocGallary extends StatelessWidget {
                                       child: Card(
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
-                                              BorderRadius.circular(30),
+                                              BorderRadius.circular(15),
                                         ),
                                         elevation: 8,
                                         child: Center(
