@@ -162,9 +162,9 @@ class _Screen0State extends State<Screen0> {
             children: [
               SizedBox(height: size.width * 0.07),
               Container(
-                // color: Colors.green,
-                child: SearchBar(searchController: searchController),
-              ),
+                  // color: Colors.green,
+                  // child: SearchBar(searchController: searchController),
+                  ),
               SizedBox(height: size.width * 0.1),
               Container(
                 child: Row(
@@ -205,14 +205,14 @@ class _Screen0State extends State<Screen0> {
               SizedBox(height: 20),
               Container(
                 // color: Colors.yellow,
-                height: size.width * 0.42,
+                height: size.width * 0.5,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.only(left: 12, right: 12),
                   children: [
-                    DocCard(screenStateIndex: 2),
+                    DocCard(screenStateIndex: 1,docCardName: "Pen",Message: "Type Handwritten Docs",gallaryIndexValue: 0,),
                     SizedBox(width: 12),
-                    DocCard(screenStateIndex: 1),
+                    DocCard(screenStateIndex: 1,docCardName: "Scan",Message: "Scan Your Docs" ,gallaryIndexValue: 1,),
                   ],
                 ),
               ),
@@ -236,23 +236,23 @@ class _Screen0State extends State<Screen0> {
               ),
               Container(
                 // margin: EdgeInsets.only(bottom: size.width * 0.14),
-                height: size.width * 0.75,
+                height: size.width * 0.825,
                 child: GridView.count(
-                    scrollDirection: Axis.horizontal,
-                    childAspectRatio: 1.1,
+                    scrollDirection: Axis.vertical,
+                    childAspectRatio: 2.5,
                     crossAxisCount: 1,
-                    // crossAxisSpacing: 0,
+                    crossAxisSpacing: 2,
                     // mainAxisSpacing: 2,
                     // padding: EdgeInsets.only(right: 20, left: 20, top: 8),
                     children: [
                       Center(
                           child: Stack(children: [
                         PreviewCard(
-                          imagePath: Image.asset("assets/folder.png"),
+                          imagePath: Image.asset("assets/docImage.png"),
                         ),
                         Positioned(
-                          top: 10,
-                          right: 10,
+                          top: 55,
+                          right: 30,
                           child: ClipOval(
                             clipBehavior: Clip.antiAlias,
                             child: Container(
@@ -269,8 +269,8 @@ class _Screen0State extends State<Screen0> {
                           imagePath: Image.asset("assets/docImage.png"),
                         ),
                         Positioned(
-                          top: 10,
-                          right: 10,
+                          top: 55,
+                          right: 30,
                           child: ClipOval(
                             child: Container(
                                 color: Colors.blue.shade300,
@@ -286,8 +286,8 @@ class _Screen0State extends State<Screen0> {
                           imagePath: Image.asset("assets/docImage.png"),
                         ),
                         Positioned(
-                          top: 10,
-                          right: 10,
+                          top: 55,
+                          right: 30,
                           child: ClipOval(
                             child: Container(
                                 color: Colors.blue.shade300,
@@ -303,8 +303,8 @@ class _Screen0State extends State<Screen0> {
                           imagePath: Image.asset("assets/docImage.png"),
                         ),
                         Positioned(
-                          top: 10,
-                          right: 10,
+                          top: 55,
+                          right: 30,
                           child: ClipOval(
                             child: Container(
                                 color: Colors.blue.shade300,
@@ -320,8 +320,8 @@ class _Screen0State extends State<Screen0> {
                           imagePath: Image.asset("assets/docImage.png"),
                         ),
                         Positioned(
-                          top: 10,
-                          right: 10,
+                          top: 55,
+                          right: 30,
                           child: ClipOval(
                             child: Container(
                                 color: Colors.blue.shade300,

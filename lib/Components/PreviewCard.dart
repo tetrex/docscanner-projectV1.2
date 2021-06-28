@@ -10,15 +10,23 @@ class PreviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.all(12),
-      width: size.width * 0.55,
-      height: size.width * 0.70,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+    return Padding(
+      padding: const EdgeInsets.all(14.0),
+      child: Container(
+        // padding: EdgeInsets.all(12),
+        width: size.width,
+        height: size.width * 0.35,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 14.0, top: 8, bottom: 8),
+          child: imagePath,
+        )),
       ),
-      child: imagePath,
     );
   }
 }

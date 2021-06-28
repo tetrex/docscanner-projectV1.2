@@ -1,10 +1,11 @@
 import 'package:doc_scanner/State/State.dart';
-import 'package:doc_scanner/Widgets/NavBar/Button.dart';
+import 'package:doc_scanner/Widgets/NavBar/HandWrittenButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 // import 'package:jumping_bottom_nav_bar/jumping_nav_bar.dart';
-import './Button.dart';
+// import './Button.dart';
+import 'ScannerButton.dart';
 
 // import 'dart:ui' as ui;
 
@@ -22,18 +23,7 @@ class _NavBarState extends State<NavBar> {
     var iconSize = size.height * 0.032;
     return Stack(
       children: [
-        Align(
-          alignment: Alignment.topRight,
-          child: Container(
-            // decoration: BoxDecoration(
-            //     borderRadius: BorderRadius.all(Radius.circular(4))),
-            margin: EdgeInsets.only(right: size.width * 0.068, bottom: 0.5),
-            height: size.width * 0.178,
-            width: size.width * 0.178,
-            // color: Colors.amber[400],
-            child: Button(),
-          ),
-        ),
+        Consumer<ScreenState>(builder: (context,screen,child)=>screen.mainButtonStateSelector()),
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
@@ -92,12 +82,13 @@ class _NavBarState extends State<NavBar> {
                         builder: (context, screen, child) => InkWell(
                               onTap: () {
                                 print("button 1");
-                                screen.index = 1;
+                                screen.index = 2;
+                                screen.gallaryIndex = 2;
                                 screen.stateSelector();
                                 print(screen.index);
                               },
                               child: (Icon(
-                                Icons.star_rate,
+                                Icons.edit,
                                 color: Colors.white,
                                 size: iconSize,
                               )),
@@ -113,12 +104,13 @@ class _NavBarState extends State<NavBar> {
                         builder: (context, screen, child) => InkWell(
                               onTap: () {
                                 print("button 2");
-                                screen.index = 2;
+                                screen.index = 3;
+                                screen.gallaryIndex = 3;
                                 screen.stateSelector();
                                 print(screen.index);
                               },
                               child: (Icon(
-                                Icons.folder,
+                                Icons.document_scanner,
                                 color: Colors.white,
                                 size: iconSize,
                               )),
